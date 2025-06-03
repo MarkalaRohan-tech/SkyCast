@@ -180,11 +180,11 @@ let isDayData = document.querySelector(".card_isDay");
 let dateData = document.querySelector(".card_date");
 
 function updateWeatherUI() {
-  tempData.innerHTML = temperature;
-  cloudData.innerHTML = cloud_cover==0? "No cloud":cloud_cover;
-  snowData.innerHTML = snowfall == 0 ? "No SnowFall":snowfall;
+  tempData.innerHTML = temperature + " °C";
+  cloudData.innerHTML = cloud_cover==0? "No cloud":cloud_cover+"%";
+  snowData.innerHTML = snowfall == 0 ? "No SnowFall" : snowfall + "cm";
   windData.innerHTML = wind_speed +" Km/h";
-  rainData.innerHTML = rain == 0 ? "No Rain" : rain;
+  rainData.innerHTML = rain == 0 ? "No Rain" : rain + "mm";
   isDayData.innerHTML = is_day == 1?"Day time":"Night time";
   if (Date_time instanceof Date && !isNaN(Date_time)) {
     dateData.innerHTML = Date_time.toLocaleDateString("en-IN", {
